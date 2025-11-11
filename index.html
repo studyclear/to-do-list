@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Focus</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Daily Focus</h1>
+      <p class="subtitle">Refleksi • Fokus • Tugas Harian</p>
+      <div class="actions">
+        <button id="openReflection">Refleksi</button>
+        <button id="resetDay" class="danger">Reset Hari</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="todo">
+        <h2>To-do Hari Ini</h2>
+        <div class="todo-input">
+          <input id="newTodo" placeholder="Tambah tugas baru..." />
+          <button id="addTodo">Tambah</button>
+        </div>
+        <ul id="todoList"></ul>
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+        <p id="progressText"></p>
+        <p id="streakText" class="small"></p>
+      </section>
+
+      <section class="focus">
+        <h2>Mode Fokus</h2>
+        <div class="focus-controls">
+          <label>Focus (menit): <input type="number" id="focusTime" value="25" /></label>
+          <label>Break (menit): <input type="number" id="breakTime" value="5" /></label>
+        </div>
+        <div class="timer-display">
+          <span id="timer">25:00</span>
+        </div>
+        <div class="timer-buttons">
+          <button id="startStop">Mulai</button>
+          <button id="resetTimer">Reset</button>
+          <button id="toggleMode">Ganti Mode</button>
+        </div>
+        <p id="modeText" class="small"></p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal Refleksi -->
+  <div id="reflectionModal" class="modal">
+    <div class="modal-content">
+      <h3>Apa pencapaian kecilmu hari ini?</h3>
+      <textarea id="reflectionInput" rows="4" placeholder="Contoh: Menyelesaikan 30 menit belajar."></textarea>
+      <div class="modal-buttons">
+        <button id="cancelReflection">Batal</button>
+        <button id="saveReflection">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
