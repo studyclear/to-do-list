@@ -1,0 +1,171 @@
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: -4px;
+}
+
+.actions button {
+  margin-left: 0.5rem;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover { opacity: 0.9; }
+
+button.danger { background: var(--danger); }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.todo, .focus {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.todo-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.progress {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 8px;
+  background: linear-gradient(90deg, #fb7185, #fbbf24);
+  width: 0%;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.focus-controls label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timer-display {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-buttons {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.modal textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
